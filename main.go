@@ -26,7 +26,7 @@ func main() {
 	timeToSleep := time.Duration(randomWait) * time.Millisecond
 	fmt.Printf("[%v] Time to sleep: %v\n", time.Now().Format("2006-01-02 15:04:05.000"), timeToSleep)
 	time.Sleep(timeToSleep)
-	fmt.Printf("[%v] Start listener at port %s\n", time.Now().Format("2006-02-01 15:04:05.000"), port)
+	fmt.Printf("[%v] Start listener at port %s\n", time.Now().Format("2006-01-02 15:04:05.000"), port)
 	http.HandleFunc("/", sayHello)
 	if err := http.ListenAndServe(port, nil); err != nil {
 		panic(err)
